@@ -10,7 +10,6 @@ import {
   Maximize2,
   X,
   Feather,
-  CheckCircle2,
   Brush,
 } from "lucide-react";
 
@@ -134,18 +133,11 @@ export default function Gallery() {
                   </p>
                 </div>
 
-                {/* Medium & Status Details - Clean & Minimal */}
-                <div className="space-y-2 text-xs sm:text-sm text-stone-600 border-t border-ochre-100 pt-3.5">
+                {/* Medium Details - Clean & Minimal */}
+                <div className="text-xs sm:text-sm text-stone-600 border-t border-ochre-100 pt-3.5">
                   <div className="flex items-center justify-between">
                     <span className="text-stone-500">Art Medium:</span>
-                    <span className="font-semibold text-stone-800 truncate max-w-[220px]">{art.medium}</span>
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <span className="text-stone-500">Status:</span>
-                    <span className="font-semibold text-emerald-800 flex items-center gap-1">
-                      <CheckCircle2 className="w-3.5 h-3.5" />
-                      {art.status}
-                    </span>
+                    <span className="font-semibold text-stone-800 truncate max-w-[240px]">{art.medium}</span>
                   </div>
                 </div>
 
