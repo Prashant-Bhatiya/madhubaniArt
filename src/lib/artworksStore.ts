@@ -1,7 +1,7 @@
 import { Artwork } from "@/types/artwork";
 import { INITIAL_ARTWORKS } from "@/data/artworks";
 
-const LOCAL_STORAGE_KEY = "chitralekha_artworks_store_v1";
+const LOCAL_STORAGE_KEY = "artisart_monika_artworks_v2";
 
 export async function fetchArtworks(): Promise<Artwork[]> {
   try {

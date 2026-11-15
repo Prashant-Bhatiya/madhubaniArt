@@ -1,32 +1,27 @@
-export type MadhubaniStyle = 
-  | 'Bharni' 
-  | 'Kachni' 
-  | 'Godna' 
-  | 'Kohbar' 
-  | 'Tantrik' 
-  | 'Interior & Contemporary';
+export type ArtCategory = 
+  | 'Madhubani Folk Mandalas' 
+  | 'Dhammapada & Calligraphy' 
+  | 'Buddha & Meditative Serenity' 
+  | 'Vipassana & Bodhi Murals';
 
 export type AvailabilityStatus = 
+  | 'Original Artwork' 
   | 'Available' 
-  | 'Exhibition' 
-  | 'Commission Only' 
-  | 'Sold';
+  | 'Commission Only';
 
 export interface Artwork {
   id: string;
   title: string;
   hindiTitle?: string;
-  style: MadhubaniStyle;
+  category: ArtCategory;
   description: string;
-  story: string;
-  dimensions: string; // e.g., "24 x 36 inches"
-  medium: string; // e.g., "Natural Dyes & Acrylic on Handmade Silk Paper"
-  year: number;
+  verseOrStory?: string;
+  medium: string;
+  year?: number;
   imageUrl: string;
-  price?: string; // e.g., "₹ 24,000" or "Inquire for price"
   status: AvailabilityStatus;
   isFeatured: boolean;
-  order: number; // for chronology control by Monika
-  interiorSuitability?: string; // e.g., "Living Room Statement, Foyer, Meditation Corner"
+  order: number;
+  signedBy?: string; // e.g. "Monika Yadav" or "Monika Shah"
   createdDate: string;
 }

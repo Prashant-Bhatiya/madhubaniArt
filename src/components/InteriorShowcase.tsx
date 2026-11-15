@@ -72,10 +72,10 @@ export default function InteriorShowcase() {
             <div className="relative rounded-3xl overflow-hidden border-2 border-stone-800 shadow-2xl group">
               <div className="relative h-96 sm:h-[480px] w-full">
                 <Image
-                  src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1200&q=80"
-                  alt="Modern Interior with Madhubani Artwork curated by Monika"
+                  src="/artworks/art-02-surya-chandra-duality-mandala.jpg"
+                  alt="Surya Chandra Duality Mandala by Monika - Art is Art"
                   fill
-                  className="object-cover group-hover:scale-104 transition-transform duration-700"
+                  className="object-cover object-center group-hover:scale-104 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-stone-950/85 via-stone-950/20 to-transparent" />
                 

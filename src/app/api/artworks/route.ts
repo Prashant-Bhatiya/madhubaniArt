@@ -54,7 +54,7 @@ export async function POST(req: NextRequest) {
     const currentArtworks = getStoredArtworks();
     const newArtwork: Artwork = {
       ...artwork,
-      id: artwork.id || `chitralekha-${Date.now()}`,
+      id: artwork.id || `monika-art-${Date.now()}`,
       order: artwork.order ?? currentArtworks.length + 1,
       createdDate: artwork.createdDate || new Date().toISOString().split("T")[0],
     };

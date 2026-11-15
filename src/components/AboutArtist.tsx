@@ -20,8 +20,8 @@ export default function AboutArtist() {
                 {/* Image Container with strict aspect ratio and height */}
                 <div className="relative w-full h-[420px] sm:h-[460px] rounded-2xl overflow-hidden bg-stone-100">
                   <Image
-                    src="https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=1000&q=80"
-                    alt="Monika - Interior Designer & Ancient Art Artist of Art is Art"
+                    src="/artworks/art-03-bhavatu-sabba-mangalam-bodhi-mural.jpg"
+                    alt="Bhavatu Sabba Mangalam Bodhi Mural by Monika - Art is Art"
                     fill
                     sizes="(max-width: 768px) 100vw, 450px"
                     className="object-cover object-center"

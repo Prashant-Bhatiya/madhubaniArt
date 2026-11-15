@@ -1,43 +1,43 @@
 "use client";
 
 import React, { useState } from "react";
-import { Sparkles, BookOpen, Layers, Sun, Feather, Eye } from "lucide-react";
+import { Sparkles, BookOpen, Layers, Sun, Feather, Eye, Leaf } from "lucide-react";
 
 export default function MadhubaniHeritage() {
   const [activeTab, setActiveTab] = useState<number>(0);
 
   const styles = [
     {
-      name: "Bharni Style (रंग भरणी)",
-      sub: "Vibrant Pigments & Divine Narratives",
-      desc: "Characterized by bold, rich color fills using traditional mineral pigments. Traditionally depicts Hindu deities (Radha-Krishna, Surya, Shiva-Parvati) and lush floral-faunal surroundings with vivid warmth.",
+      name: "Mithila Folk Mandalas (सूर्य एवं प्रकृति मंडल)",
+      sub: "Sacred Solar Iconography & Kalash Processions",
+      desc: "Inspired by ancient Mithila ceremonial wall art, centering on the radiant Sun God (Surya Narayana) and traditional women carrying holy kalash. Double-line kohl borders, vibrant ochre, vermilion, and auspicious leaf vines celebrate life, fertility, and cosmic warmth.",
       icon: Sun,
       palette: ["#9e2a2b", "#d48b14", "#17565e", "#2d5a3f"],
-      visualTrait: "Dense color saturation, double-line borders, zero empty space filled with leaves and flowers.",
+      visualTrait: "Concentric solar halos, ceremonial kalash processions, sacred lotus borders, and zero empty space filled with energized leaf motifs.",
     },
     {
-      name: "Kachni Style (कचनी रेखांकन)",
-      sub: "Fine Line Hatching & Monochrome Rhythm",
-      desc: "Derived from 'Kachni' meaning delicate linear hatching. Executed strictly using fine bamboo pens (kalam) with black soot ink or vermilion wash, creating mesmerizing texture through parallel and criss-cross lines.",
+      name: "Kachni Fine-Line Hatching (कचनी रेखांकन)",
+      sub: "Micro-Hatching & Monochromatic Geometry",
+      desc: "Derived from 'Kachni' meaning delicate linear hatching. Executed strictly using fine bamboo pens (kalam) with black soot ink and dual-tone pigments, creating mesmerizing rhythmic depth through parallel and criss-cross lines.",
       icon: Feather,
       palette: ["#1a1615", "#8d4a0d", "#ded0b6"],
-      visualTrait: "Intricate micro-hatching, poetic avian figures, delicate fish scales and textured tree bark.",
+      visualTrait: "Intricate micro-hatching, poetic avian figures, delicate fish scales and textured sacred tree bark.",
     },
     {
-      name: "Godna Style (गोधना रेखा)",
-      sub: "Ancient Tattoo Motifs & Tribal Mandalas",
-      desc: "Rooted in the ancestral body-tattooing tradition of the Mithila plains. Uses concentric circular rings, repetitive needle-stroke patterns, and cosmic talismans that symbolize spiritual defense and grounded connection to earth.",
-      icon: Eye,
-      palette: ["#1a1615", "#5c4033", "#c29b38"],
-      visualTrait: "Concentric circular rhythm, geometric solar discs, stylized flora, and meditative symmetry.",
+      name: "Dhammapada & Sacred Calligraphy (धम्मपद सुत्त)",
+      sub: "Spiritual Calligraphy & Meditative Wisdom",
+      desc: "A signature contemporary series by Monika, merging classical Indian artistic serenity with hand-lettered verses from the ancient Pali Dhammapada. Each stroke reflects mindfulness, taming of the mind, and inner stillness.",
+      icon: BookOpen,
+      palette: ["#1a1615", "#d48b14", "#9e2a2b"],
+      visualTrait: "Flowing English and Pali calligraphy seamlessly integrated with Buddha profiles, lotus blossoms, and starry night skies.",
     },
     {
-      name: "Kohbar Ghar (कोहबर भित्ति)",
-      sub: "The Sacred Nuptial Chamber Mandala",
-      desc: "The pinnacle ceremonial art of Mithila, painted on the walls of the bridal chamber. Rich in esoteric blessings: the central lotus (Kamal) and bamboo shaft (Bans) represent the eternal union of cosmic feminine and masculine energies.",
-      icon: Sparkles,
-      palette: ["#9e2a2b", "#d48b14", "#17565e"],
-      visualTrait: "Bamboo shaft, blooming lotus, swimming fish, tortoises, and sun-moon celestial observers.",
+      name: "Bodhi Murals & Botanical Impressions (बोधि वृक्ष)",
+      sub: "Sacred Peepal Impressions & Metta Murals",
+      desc: "Monumental multi-panel spiritual compositions featuring real Bodhi leaf botanical impressions, sunflowers, and the compassionate teachings of universal loving-kindness (Bhavatu Sabba Mangalam).",
+      icon: Leaf,
+      palette: ["#2d5a3f", "#d48b14", "#9e2a2b"],
+      visualTrait: "Multi-panel polyptych compositions, authentic leaf skeleton impressions, and golden radiating foliage.",
     },
   ];
 
@@ -48,18 +48,17 @@ export default function MadhubaniHeritage() {
         {/* Section Heading */}
         <div className="text-center max-w-3xl mx-auto space-y-4">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-madder-50 border border-madder-200 text-madder-800 text-xs sm:text-sm font-semibold uppercase tracking-widest">
-            <BookOpen className="w-4 h-4" />
-            <span>The Living Soul of Mithila</span>
+            <Sparkles className="w-4 h-4 text-madder-700" />
+            <span>Monika&apos;s Artistic Traditions</span>
           </div>
 
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-stone-900 leading-[1.2]">
-            Understanding <span className="text-madder-700 font-serif italic">Madhubani Art</span>
+            The Art Forms of <span className="text-madder-700 font-serif italic">Monika</span>
           </h2>
 
           <p className="text-stone-700 text-base sm:text-lg leading-relaxed">
-            Originating in the historic Mithila kingdom of Bihar and southern Nepal, Madhubani painting was born when 
-            King Janaka commissioned artists to immortalize the royal wedding of Goddess Sita and Lord Rama. Passed down across 
-            generations of women artists, each piece breathes life into walls and canvases without leaving a single stroke empty.
+            Exploring the unique confluence of authentic Mithila Madhubani folk roots, sacred Buddhist Dhammapada calligraphy, 
+            and meditative Bodhi murals hand-painted in Monika&apos;s studio.
           </p>
         </div>
 
@@ -69,7 +68,7 @@ export default function MadhubaniHeritage() {
           {/* Navigation Pill List */}
           <div className="lg:col-span-5 space-y-3.5">
             <p className="text-xs sm:text-sm font-bold text-stone-500 uppercase tracking-widest pl-2">
-              Select a Traditional Style:
+              Select an Art Form:
             </p>
             {styles.map((style, idx) => {
               const Icon = style.icon;
@@ -127,7 +126,7 @@ export default function MadhubaniHeritage() {
                   Style Profile #{activeTab + 1}
                 </span>
                 <span className="text-xs sm:text-sm text-stone-500 font-serif italic">
-                  Preserved &amp; Practiced by Monika
+                  Handcrafted by Monika
                 </span>
               </div>
 
@@ -151,17 +150,17 @@ export default function MadhubaniHeritage() {
 
                 <div className="bg-white/95 p-4 sm:p-5 rounded-2xl border border-ochre-100 shadow-xs">
                   <h4 className="text-xs font-bold text-stone-800 uppercase tracking-wider mb-1.5 text-madder-800">
-                    Traditional Mediums
+                    Technique &amp; Materials
                   </h4>
                   <p className="text-xs sm:text-sm text-stone-600 leading-relaxed">
-                    Bamboo twigs, cotton nibs, cow dung wash (leepan), lamp soot &amp; crushed palash flowers.
+                    Fine nib pen, handmade archival sheets, real botanical leaf prints, acrylic gouache &amp; mineral pigments.
                   </p>
                 </div>
               </div>
 
               <div className="pt-2 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
                 <div className="flex items-center gap-2.5 text-xs sm:text-sm text-stone-700">
-                  <span className="font-semibold text-madder-700">Color Resonance:</span>
+                  <span className="font-semibold text-madder-700">Color Palette:</span>
                   <div className="flex gap-2 items-center">
                     {styles[activeTab].palette.map((color, idx) => (
                       <span
@@ -178,7 +177,7 @@ export default function MadhubaniHeritage() {
                   href="#gallery"
                   className="text-xs sm:text-sm font-bold text-madder-700 hover:text-madder-800 underline underline-offset-4 tracking-wider uppercase"
                 >
-                  Explore in Gallery →
+                  View in Gallery →
                 </a>
               </div>
 

@@ -107,23 +107,23 @@ export default function Hero() {
 
                 <div className="relative h-80 sm:h-96 md:h-[430px] w-full rounded-xl overflow-hidden bg-stone-100">
                   <Image
-                    src="https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=1200&q=80"
-                    alt="Madhubani Tree of Life Painting by Monika - Art is Art"
+                    src="/artworks/art-01-surya-narayana-mithila-kalash.jpg"
+                    alt="Madhubani Surya Narayana Kalash Painting by Monika - Art is Art"
                     fill
                     className="object-cover object-center transition-transform duration-700 hover:scale-105"
                     priority
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent" />
                   
                   <div className="absolute bottom-4 left-4 right-4 text-white">
-                    <span className="text-[10px] tracking-widest uppercase font-semibold text-ochre-300 bg-black/40 px-2 py-0.5 rounded backdrop-blur-sm">
-                      Signature Masterpiece
+                    <span className="text-[10px] tracking-widest uppercase font-semibold text-ochre-300 bg-black/40 px-2 py-0.5 rounded backdrop-blur-xs">
+                      Signature Original Artwork
                     </span>
                     <h3 className="text-xl font-display font-bold mt-1 text-white">
-                      Mithila Kalpavriksha (Tree of Life)
+                      Surya Narayana &amp; Mithila Kalash Yatra
                     </h3>
                     <p className="text-xs text-stone-300 line-clamp-1 mt-0.5">
-                      Monochrome Kachni line-hatching on handmade archival cotton paper
+                      Authentic Madhubani scroll painting hand-drawn by Monika
                     </p>
                   </div>
                 </div>
