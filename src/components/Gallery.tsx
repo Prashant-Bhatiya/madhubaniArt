@@ -130,7 +130,7 @@ export default function Gallery() {
                 >
                   <Image
                     src={art.imageUrl}
-                    alt={`${art.title} by Monika - Chitralekha Art`}
+                    alt={`${art.title} by Monika - Art is Art`}
                     fill
                     className="object-cover object-center group-hover:scale-108 transition-transform duration-700"
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"

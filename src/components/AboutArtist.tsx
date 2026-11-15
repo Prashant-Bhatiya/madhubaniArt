@@ -19,7 +19,7 @@ export default function AboutArtist() {
                 <div className="relative h-96 sm:h-[450px] w-full rounded-xl overflow-hidden bg-stone-100">
                   <Image
                     src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=1000&q=80"
-                    alt="Monika - Interior Designer & Ancient Art Artist of Chitralekha"
+                    alt="Monika - Interior Designer & Ancient Art Artist of Art is Art"
                     fill
                     className="object-cover object-center"
                   />
@@ -27,13 +27,13 @@ export default function AboutArtist() {
                   
                   <div className="absolute bottom-4 left-4 right-4 text-white">
                     <span className="text-[10px] tracking-widest uppercase font-semibold text-ochre-300 bg-stone-900/60 px-2 py-0.5 rounded">
-                      The Artist & Designer
+                      The Artist &amp; Designer
                     </span>
                     <h3 className="text-2xl font-display font-bold mt-1">
                       Monika
                     </h3>
                     <p className="text-xs text-stone-200">
-                      Founder, Chitralekha Art Studio
+                      Founder, Art is Art Studio
                     </p>
                   </div>
                 </div>
@@ -68,7 +68,7 @@ export default function AboutArtist() {
             <div className="space-y-4 text-stone-700 text-base leading-relaxed">
               <p>
                 Namaste. I am <strong className="text-stone-950 font-semibold">Monika</strong>, an Interior Designer and Ancient Folk Art Artist. 
-                Through <strong className="text-madder-800 font-semibold">Chitralekha</strong>, my mission is to preserve the sacred, devotional spirit of 
+                Through <strong className="text-madder-800 font-semibold font-display">Art is Art</strong>, my mission is to preserve the sacred, devotional spirit of 
                 <strong> Madhubani (Mithila) art</strong> while harmonizing it with the refined proportions of modern luxury architecture.
               </p>
 
@@ -111,7 +111,7 @@ export default function AboutArtist() {
                 <span>Call Monika: 8758752080</span>
               </a>
               <span className="text-xs text-stone-500 font-serif italic">
-                Studio visits & spatial consultations by appointment.
+                Studio visits &amp; spatial consultations by appointment.
               </span>
             </div>
 

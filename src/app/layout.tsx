@@ -2,14 +2,15 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Chitralekha | Authentic Madhubani Art & Interior Design by Monika",
+  metadataBase: new URL("https://artisart.in"),
+  title: "Art is Art | Authentic Madhubani Art & Interior Design by Monika",
   description:
-    "Explore authentic handcrafted Madhubani (Mithila) art by Monika — Interior Designer & Ancient Art Artist. Bespoke Kachni, Bharni, Godna, and Kohbar paintings harmonized for luxury living spaces and sacred interiors.",
+    "Explore authentic handcrafted Madhubani (Mithila) art by Monika — Interior Designer & Ancient Art Artist. Art is Art curates bespoke Kachni, Bharni, Godna, and Kohbar paintings harmonized for luxury living spaces and sacred interiors.",
   keywords: [
+    "Art is Art",
+    "Art is Art Monika",
     "Madhubani art",
     "Mithila painting",
-    "Chitralekha",
-    "Chitralekha Art",
     "Monika artist",
     "Ancient art artist",
     "Interior designer Madhubani art",
@@ -21,33 +22,38 @@ export const metadata: Metadata = {
     "Custom Madhubani paintings",
     "Vastu art paintings",
   ],
-  authors: [{ name: "Monika", url: "https://chitralekhaart.com" }],
-  creator: "Monika - Chitralekha",
+  authors: [{ name: "Monika", url: "https://artisart.in" }],
+  creator: "Monika - Art is Art",
   openGraph: {
     type: "website",
     locale: "en_IN",
-    url: "https://chitralekhaart.com",
-    siteName: "Chitralekha Art",
-    title: "Chitralekha | Authentic Madhubani Folk Art & Interiors by Monika",
+    url: "https://artisart.in",
+    siteName: "Art is Art",
+    title: "Art is Art | Authentic Madhubani Folk Art & Interiors by Monika",
     description:
       "Handcrafted Madhubani art and architectural interior murals by Monika. Discover Kachni line-hatching, vibrant Bharni mythologies, and sacred Kohbar chambers.",
     images: [
       {
-        url: "https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=1200&q=80",
-        width: 1200,
-        height: 630,
-        alt: "Chitralekha Madhubani Art by Monika",
+        url: "/logo.png",
+        width: 840,
+        height: 180,
+        alt: "Art is Art - Madhubani Art & Interiors by Monika",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Chitralekha | Madhubani Art & Interiors by Monika",
+    title: "Art is Art | Madhubani Art & Interiors by Monika",
     description:
       "Traditional Mithila paintings crafted with natural dyes and bamboo nibs for modern interior sanctuaries.",
+    images: ["/logo.png"],
   },
   icons: {
-    icon: "/favicon.ico",
+    icon: [
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon.png", sizes: "64x64", type: "image/png" },
+    ],
+    apple: "/apple-touch-icon.png",
   },
 };
 
@@ -59,7 +65,7 @@ export default function RootLayout({
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "ArtGallery",
-    name: "Chitralekha Art Studio",
+    name: "Art is Art",
     founder: {
       "@type": "Person",
       name: "Monika",
@@ -68,7 +74,7 @@ export default function RootLayout({
     },
     telephone: "+91-8758752080",
     description:
-      "Chitralekha is an authentic sanctuary for traditional Madhubani (Mithila) art and custom interior murals curated by Monika.",
+      "Art is Art is an authentic sanctuary for traditional Madhubani (Mithila) folk art and custom interior murals curated by Monika.",
     genre: "Madhubani Folk Art",
     areaServed: "Worldwide",
   };
@@ -80,6 +86,7 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
+        <link rel="icon" href="/favicon.png" />
       </head>
       <body className="antialiased bg-[#faf7f2] text-stone-900 selection:bg-madder-700 selection:text-white">
         {children}

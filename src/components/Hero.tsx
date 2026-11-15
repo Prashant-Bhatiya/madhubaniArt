@@ -6,7 +6,7 @@ import { Sparkles, ArrowRight, Palette, Compass, MessageCircle, Brush } from "lu
 
 export default function Hero() {
   return (
-    <section className="relative min-h-[92vh] flex items-center justify-center pt-28 pb-16 overflow-hidden">
+    <section className="relative min-h-[90vh] flex items-center justify-center pt-28 pb-16 overflow-hidden">
       {/* Decorative Traditional Madhubani Motif Corner Accents */}
       <div className="absolute top-12 left-4 md:left-12 w-32 h-32 md:w-48 md:h-48 opacity-15 pointer-events-none select-none">
         <svg viewBox="0 0 100 100" fill="none" className="w-full h-full text-madder-700 stroke-current">
@@ -48,10 +48,10 @@ export default function Hero() {
               </span>
             </h1>
 
-            {/* Sub-copy emphasizing Monika's unique duality */}
+            {/* Sub-copy emphasizing Monika's unique brand Art is Art */}
             <p className="text-stone-700 text-lg md:text-xl font-light leading-relaxed max-w-2xl mx-auto lg:mx-0">
-              Curated by <strong className="font-semibold text-stone-900">Monika</strong> — Interior Designer & Ancient Art Artist. 
-              Celebrating the centuries-old, sacred ritual art of Mithila (Bihar) through hand-crafted Madhubani paintings tailored for luxury living, architectural serenity, and cultural pride.
+              Welcome to <strong className="font-bold text-stone-900 font-display">Art is Art</strong> — curated by <strong className="font-semibold text-stone-900">Monika</strong>, 
+              Interior Designer &amp; Ancient Art Artist. Celebrating the sacred ritual art of Mithila (Bihar) through hand-crafted Madhubani paintings tailored for luxury living, architectural serenity, and cultural pride.
             </p>
 
             {/* Feature Highlights Grid */}
@@ -77,20 +77,20 @@ export default function Hero() {
             <div className="pt-4 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
               <a
                 href="#gallery"
-                className="w-full sm:w-auto px-7 py-3.5 bg-gradient-to-r from-madder-700 to-madder-800 hover:from-madder-800 hover:to-madder-900 text-white rounded-full font-medium text-sm tracking-wider uppercase shadow-lg shadow-madder-900/20 transition-all duration-300 transform hover:-translate-y-0.5 flex items-center justify-center gap-2 group"
+                className="w-full sm:w-auto px-7 py-3.5 bg-gradient-to-r from-madder-700 to-madder-800 hover:from-madder-800 hover:to-madder-900 text-white rounded-full font-semibold text-xs tracking-wider uppercase shadow-lg shadow-madder-900/20 transition-all duration-200 transform hover:-translate-y-0.5 flex items-center justify-center gap-2 group"
               >
-                <span>View Art Portfolio</span>
+                <span>Explore Artworks</span>
                 <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
               </a>
 
               <a
-                href="https://wa.me/918758752080?text=Namaste%20Monika%2C%20I%20would%20love%20to%20discuss%20a%20personal%20crafted%20Madhubani%20painting%20or%20interior%20project."
+                href="https://wa.me/918758752080?text=Namaste%20Monika%2C%20I%20would%20love%20to%20discuss%20a%20personal%20crafted%20Madhubani%20painting%20from%20Art%20is%20Art."
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full sm:w-auto px-6 py-3.5 bg-white/80 hover:bg-white text-stone-800 hover:text-stone-900 rounded-full font-medium text-sm tracking-wider uppercase border border-ochre-300 shadow-sm transition-all duration-300 flex items-center justify-center gap-2"
+                className="w-full sm:w-auto px-6 py-3.5 bg-white/80 hover:bg-white text-stone-800 hover:text-stone-900 rounded-full font-semibold text-xs tracking-wider uppercase border border-ochre-300 shadow-sm transition-all duration-200 flex items-center justify-center gap-2"
               >
                 <MessageCircle className="w-4 h-4 text-emerald-600" />
-                <span>Commission Art (8758752080)</span>
+                <span>Inquire: 8758752080</span>
               </a>
             </div>
 
@@ -103,20 +103,18 @@ export default function Hero() {
               {/* Traditional Frame Effect */}
               <div className="relative p-3.5 bg-[#fdfaf3] rounded-2xl border-2 border-ochre-300 shadow-2xl overflow-hidden">
                 
-                {/* Mithila Outer Border Accent */}
                 <div className="absolute inset-2 border border-dashed border-madder-500/40 pointer-events-none rounded-xl" />
 
                 <div className="relative h-80 sm:h-96 md:h-[430px] w-full rounded-lg overflow-hidden bg-stone-100">
                   <Image
                     src="https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=1200&q=80"
-                    alt="Madhubani Tree of Life Painting by Monika - Chitralekha"
+                    alt="Madhubani Tree of Life Painting by Monika - Art is Art"
                     fill
                     className="object-cover object-center transition-transform duration-700 hover:scale-105"
                     priority
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
                   
-                  {/* Floating Caption inside Image */}
                   <div className="absolute bottom-4 left-4 right-4 text-white">
                     <span className="text-[10px] tracking-widest uppercase font-semibold text-ochre-300 bg-black/40 px-2 py-0.5 rounded backdrop-blur-sm">
                       Signature Masterpiece
@@ -137,7 +135,7 @@ export default function Hero() {
                     <span className="font-serif italic text-stone-800">Original Handcrafted Artwork</span>
                   </div>
                   <span className="font-semibold text-madder-700 tracking-wider">
-                    By Monika • Chitralekha
+                    By Monika • Art is Art
                   </span>
                 </div>
 

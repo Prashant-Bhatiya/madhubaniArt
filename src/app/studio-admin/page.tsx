@@ -71,7 +71,7 @@ export default function StudioAdminPage() {
 
   // Verify auth on mount
   useEffect(() => {
-    const savedAuth = sessionStorage.getItem("chitralekha_admin_auth");
+    const savedAuth = sessionStorage.getItem("artisart_admin_auth") || sessionStorage.getItem("chitralekha_admin_auth");
     if (savedAuth === "true") {
       setIsAuthenticated(true);
     }
@@ -95,13 +95,15 @@ export default function StudioAdminPage() {
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
     // Default master passcodes for Monika
+    const p = passcode.trim().toLowerCase();
     if (
-      passcode.trim() === "monika123" ||
-      passcode.trim() === "chitralekha" ||
-      passcode.trim() === "8758752080"
+      p === "artisart" ||
+      p === "monika123" ||
+      p === "chitralekha" ||
+      p === "8758752080"
     ) {
       setIsAuthenticated(true);
-      sessionStorage.setItem("chitralekha_admin_auth", "true");
+      sessionStorage.setItem("artisart_admin_auth", "true");
       setAuthError("");
     } else {
       setAuthError("Incorrect passcode. Please check with Monika.");
@@ -110,6 +112,7 @@ export default function StudioAdminPage() {
 
   const handleLogout = () => {
     setIsAuthenticated(false);
+    sessionStorage.removeItem("artisart_admin_auth");
     sessionStorage.removeItem("chitralekha_admin_auth");
   };
 
@@ -288,7 +291,7 @@ export default function StudioAdminPage() {
     const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(artworks, null, 2));
     const downloadAnchor = document.createElement("a");
     downloadAnchor.setAttribute("href", dataStr);
-    downloadAnchor.setAttribute("download", `chitralekha-portfolio-backup-${new Date().toISOString().split("T")[0]}.json`);
+    downloadAnchor.setAttribute("download", `artisart-portfolio-backup-${new Date().toISOString().split("T")[0]}.json`);
     document.body.appendChild(downloadAnchor);
     downloadAnchor.click();
     downloadAnchor.remove();
@@ -331,7 +334,7 @@ export default function StudioAdminPage() {
                 className="w-full px-4 py-3 rounded-xl border border-stone-300 focus:border-madder-600 focus:ring-1 focus:ring-madder-600 outline-none text-sm bg-white"
               />
               <span className="text-[10px] text-stone-500 block mt-1">
-                Hint: <code>chitralekha</code> or <code>monika123</code> or <code>8758752080</code>
+                Hint: <code>artisart</code> or <code>monika123</code> or <code>8758752080</code>
               </span>
             </div>
 

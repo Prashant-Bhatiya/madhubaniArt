@@ -21,7 +21,7 @@ export default function InquirySection() {
   const handleWhatsAppSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
-    const text = `Namaste Monika!%0A%0A*New Art Commission Inquiry via Chitralekha:*%0A` +
+    const text = `Namaste Monika!%0A%0A*New Art Commission Inquiry via Art is Art:*%0A` +
       `*Name:* ${encodeURIComponent(formData.name)}%0A` +
       `*Contact:* ${encodeURIComponent(formData.phone)}%0A` +
       `*Style of Interest:* ${encodeURIComponent(formData.styleInterest)}%0A` +

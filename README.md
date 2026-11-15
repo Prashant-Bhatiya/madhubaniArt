@@ -1,11 +1,11 @@
-# 🎨 Chitralekha — Madhubani Art & Interior Sanctuary
+# 🎨 Art is Art — Madhubani Art & Interior Sanctuary
 
-**Chitralekha** is a fine-art portfolio website and interior design showcase founded by **Monika** — an *Interior Designer and Ancient Art Artist*. The platform is dedicated to preserving and elevating authentic **Madhubani (Mithila) Folk Art** for modern luxury spaces, private collectors, and sacred architecture.
+**Art is Art** is a fine-art portfolio website and interior design showcase founded by **Monika** — an *Interior Designer and Ancient Art Artist*. The platform is dedicated to preserving and elevating authentic **Madhubani (Mithila) Folk Art** for modern luxury spaces, private collectors, and sacred architecture.
 
 ---
 
 ## 🌟 Brand & Artist Identity
-* **Brand / Studio Name:** Chitralekha
+* **Brand / Studio Name:** Art is Art
 * **Artist:** Monika
 * **Expertise:** Interior Designer & Ancient Art Artist
 * **Art Form:** Madhubani (Mithila) Folk Art originating from Bihar, India & Nepal
@@ -14,7 +14,7 @@
 ---
 
 ## 🖌️ Bespoke Logo & Symbolism
-The custom **Chitralekha Logo** combines:
+The custom **Art is Art Logo** combines:
 1. **The Dynamic Artist Paintbrush:** Hand-drawn golden handle with a vermilion madder tip, symbolizing creative vitality.
 2. **Sacred Madhubani Lotus (*Kamal*):** Represents cosmic purity, fertility, and auspicious beginnings.
 3. **Mithila Twin Fish (*Matsya*):** Finely hatched with traditional *Kachni* line-work, bringing liquid prosperity and abundance.
@@ -25,11 +25,13 @@ The custom **Chitralekha Logo** combines:
 ## 🚀 Key Features
 
 ### 1. Public Visitor Experience (Art Lovers & Collectors)
+* **Header & Navigation:** Polished alignment with short titles (`Artworks`, `Styles`, `Interiors`, `About`, `Inquire`) preventing any awkward line wraps.
+* **Mini Logo & Favicons:** Dedicated PNG and SVG icons for browser tabs, bookmarks, and mobile home screens (`favicon.png`, `apple-touch-icon.png`, `logo-mini.png`).
 * **High-End Mithila Aesthetic:** Authentic terracotta madder (`#9E2A2B`), haldi gold (`#D48B14`), kohl black lines, and raw silk/parchment background textures.
 * **Heritage Guide:** Visual and cultural exploration of the five core styles:
   * **Bharni:** Rich, vibrant color fills with mineral pigments.
   * **Kachni:** Fine bamboo-nib line hatching in monochrome/dual-tones.
-  * **Godna:** Ancient circular tattoo talismans and tribal rhythm.
+  * **Godna:** Ancestral concentric tattoo talismans and tribal rhythm.
   * **Kohbar:** Sacred nuptial chamber blessing murals (*bans*, *kamal*, *mayur*).
   * **Tantrik:** Esoteric spiritual mandalas and sacred geometry.
 * **Curated Gallery & Lightbox:**
@@ -41,7 +43,7 @@ The custom **Chitralekha Logo** combines:
 
 ### 2. Single-Owner Artist Studio (`/studio-admin`)
 * **Discreet Access:** Accessible only via direct route `/studio-admin` or a subtle footer lock icon.
-* **Passcode Protected:** Default passcodes: `monika123` / `chitralekha` / `8758752080`.
+* **Passcode Protected:** Default passcodes: `artisart` / `monika123` / `8758752080`.
 * **Chronology / Portfolio Reordering:** 1-click **▲ Move Up** and **▼ Move Down** buttons to reorder paintings in real-time.
 * **Upload & Image Management:** Upload photos directly from phone/laptop or paste image links with live preview.
 * **Artwork Metadata:** Update titles (English & Hindi), dimensions, stories, medium, prices, and "Featured" toggles.
@@ -52,6 +54,7 @@ The custom **Chitralekha Logo** combines:
 ## 💻 Tech Stack
 * **Framework:** [Next.js](https://nextjs.org/) (App Router, React 18, TypeScript)
 * **Styling:** [Tailwind CSS](https://tailwindcss.com/) with custom Mithila design tokens
+* **Image Processing:** [Sharp](https://sharp.pixelplumbing.com/) (crisp SVG to PNG generation)
 * **Icons:** [Lucide React](https://lucide.dev/)
 * **Typography:** Playfair Display, Cormorant Garamond, Cinzel, Outfit
 
@@ -70,10 +73,10 @@ Navigate to:
 ```
 http://localhost:3000/studio-admin
 ```
-Enter passcode: `chitralekha` or `monika123`.
+Enter passcode: `artisart` or `monika123`.
 
-### 3. Production Build
+### 3. Generate Logos & PNGs
 ```bash
-npm run build
-npm run start
+node scripts/generate-pngs.mjs
 ```
+Generates all PNG assets into `public/`.
