@@ -9,8 +9,6 @@ import {
   Sparkles,
   Maximize2,
   X,
-  MessageCircle,
-  Mail,
   Feather,
   CheckCircle2,
   Brush,
@@ -58,7 +56,7 @@ export default function Gallery() {
 
           <p className="text-stone-700 text-base sm:text-lg leading-relaxed">
             Every piece below is an original handcrafted artwork painted by Monika — fusing traditional Mithila Madhubani symbolism, 
-            sacred Dhammapada Buddhist calligraphy, and meditative Bodhi murals.
+            sacred Dhammapada Buddhist calligraphy, and meditative Bodhi murals. Click any piece to inspect details and sacred inscriptions.
           </p>
         </div>
 
@@ -79,18 +77,16 @@ export default function Gallery() {
           ))}
         </div>
 
-        {/* Artworks Grid */}
+        {/* Artworks Grid - CLEAN CARDS WITH NO BUTTONS */}
         <div className="mt-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-9">
           {filteredArtworks.map((art) => (
             <div
               key={art.id}
-              className="group bg-[#fdfbf7] rounded-3xl border border-ochre-200/90 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden hover:-translate-y-1.5"
+              onClick={() => setActiveArtwork(art)}
+              className="group bg-[#fdfbf7] rounded-3xl border border-ochre-200/90 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden hover:-translate-y-1.5 cursor-pointer"
             >
               {/* Artwork Image Container */}
-              <div
-                className="relative h-80 sm:h-96 w-full overflow-hidden cursor-pointer bg-stone-100"
-                onClick={() => setActiveArtwork(art)}
-              >
+              <div className="relative h-80 sm:h-96 w-full overflow-hidden bg-stone-100">
                 <Image
                   src={art.imageUrl}
                   alt={`${art.title} - Original Painting by Monika`}
@@ -102,7 +98,7 @@ export default function Gallery() {
                 <div className="absolute inset-0 bg-gradient-to-t from-stone-950/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-5">
                   <span className="inline-flex items-center gap-2 text-xs sm:text-sm text-white bg-stone-900/90 px-4 py-2 rounded-full backdrop-blur-xs font-medium">
                     <Maximize2 className="w-4 h-4 text-amber-300" />
-                    <span>View Artwork Details &amp; Verse</span>
+                    <span>View Painting &amp; Verse</span>
                   </span>
                 </div>
 
@@ -122,7 +118,7 @@ export default function Gallery() {
                 </div>
               </div>
 
-              {/* Card Content - NO PRICING */}
+              {/* Card Content - Pure, Clean Art Display with NO BUTTONS */}
               <div className="p-6 flex-1 flex flex-col justify-between space-y-4">
                 <div>
                   {art.hindiTitle && (
@@ -130,10 +126,7 @@ export default function Gallery() {
                       {art.hindiTitle}
                     </span>
                   )}
-                  <h3
-                    onClick={() => setActiveArtwork(art)}
-                    className="text-xl sm:text-2xl font-display font-bold text-stone-900 hover:text-madder-700 cursor-pointer transition-colors leading-snug"
-                  >
+                  <h3 className="text-xl sm:text-2xl font-display font-bold text-stone-900 group-hover:text-madder-700 transition-colors leading-snug">
                     {art.title}
                   </h3>
                   <p className="text-sm text-stone-600 line-clamp-2 mt-2 leading-relaxed">
@@ -141,8 +134,8 @@ export default function Gallery() {
                   </p>
                 </div>
 
-                {/* Medium Details */}
-                <div className="space-y-1.5 text-xs sm:text-sm text-stone-600 border-t border-ochre-100 pt-3.5">
+                {/* Medium & Status Details - Clean & Minimal */}
+                <div className="space-y-2 text-xs sm:text-sm text-stone-600 border-t border-ochre-100 pt-3.5">
                   <div className="flex items-center justify-between">
                     <span className="text-stone-500">Art Medium:</span>
                     <span className="font-semibold text-stone-800 truncate max-w-[220px]">{art.medium}</span>
@@ -156,29 +149,6 @@ export default function Gallery() {
                   </div>
                 </div>
 
-                {/* Inquire Action Buttons - Direct Contact */}
-                <div className="pt-3 grid grid-cols-2 gap-2 border-t border-ochre-100">
-                  <a
-                    href={`https://wa.me/918758752080?text=Namaste%20Monika%2C%20I%20am%20interested%20in%20your%20original%20painting%3A%20%22${encodeURIComponent(
-                      art.title
-                    )}%22.`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="py-2.5 px-3 bg-emerald-700 hover:bg-emerald-800 text-white rounded-xl text-xs font-bold tracking-wider uppercase flex items-center justify-center gap-1.5 transition-colors shadow-xs"
-                  >
-                    <MessageCircle className="w-3.5 h-3.5" />
-                    <span>WhatsApp</span>
-                  </a>
-
-                  <a
-                    href={`mailto:savmon15@gmail.com?subject=Art%20is%20Art%20-%20Inquiry%20for%20${encodeURIComponent(art.title)}&body=Namaste%20Monika%2C%0A%0AI%20am%20interested%20in%20your%20artwork%3A%20${encodeURIComponent(art.title)}.`}
-                    className="py-2.5 px-3 bg-stone-900 hover:bg-stone-800 text-white rounded-xl text-xs font-bold tracking-wider uppercase flex items-center justify-center gap-1.5 transition-colors shadow-xs"
-                  >
-                    <Mail className="w-3.5 h-3.5 text-amber-300" />
-                    <span>Email</span>
-                  </a>
-                </div>
-
               </div>
             </div>
           ))}
@@ -188,9 +158,14 @@ export default function Gallery() {
 
       {/* Lightbox Modal with Full Painting and Inscription Details */}
       {activeArtwork && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-black/85 backdrop-blur-sm animate-in fade-in duration-200">
-          <div className="bg-[#fefcf8] rounded-3xl max-w-4xl w-full max-h-[92vh] overflow-y-auto border-2 border-ochre-300 shadow-2xl relative">
-            
+        <div 
+          className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-black/85 backdrop-blur-sm animate-in fade-in duration-200"
+          onClick={() => setActiveArtwork(null)}
+        >
+          <div 
+            className="bg-[#fefcf8] rounded-3xl max-w-4xl w-full max-h-[92vh] overflow-y-auto border-2 border-ochre-300 shadow-2xl relative"
+            onClick={(e) => e.stopPropagation()}
+          >
             <button
               onClick={() => setActiveArtwork(null)}
               className="absolute top-4 right-4 z-10 p-2.5 rounded-full bg-stone-900/80 hover:bg-stone-900 text-white focus:outline-none transition-colors cursor-pointer"
@@ -213,7 +188,7 @@ export default function Gallery() {
                 </div>
               </div>
 
-              {/* Story & Specifications - NO PRICING */}
+              {/* Story & Specifications */}
               <div className="p-6 sm:p-8 lg:p-10 flex flex-col justify-between space-y-6">
                 <div>
                   <div className="flex items-center gap-2 mb-2">
@@ -262,33 +237,17 @@ export default function Gallery() {
                   </div>
                 </div>
 
-                {/* Direct Action Buttons */}
-                <div className="pt-4 border-t border-stone-200 space-y-2.5">
-                  <span className="text-xs font-bold uppercase tracking-wider text-stone-500 block">
-                    Interested in this Original Piece?
+                <div className="pt-4 border-t border-stone-200 flex items-center justify-between">
+                  <span className="text-xs text-stone-500 italic">
+                    To inquire about custom sizes or original artwork, use the commission section below.
                   </span>
-                  
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                    <a
-                      href={`https://wa.me/918758752080?text=Namaste%20Monika%2C%20I%20am%20interested%20in%20acquiring%20your%20artwork%3A%20%22${encodeURIComponent(
-                        activeArtwork.title
-                      )}%22.`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="py-3 px-4 bg-emerald-700 hover:bg-emerald-800 text-white rounded-xl font-bold text-xs sm:text-sm tracking-wider uppercase shadow-md flex items-center justify-center gap-2 transition-all cursor-pointer"
-                    >
-                      <MessageCircle className="w-4 h-4" />
-                      <span>WhatsApp Monika</span>
-                    </a>
-
-                    <a
-                      href={`mailto:savmon15@gmail.com?subject=Art%20is%20Art%20-%20Inquiry%20for%20${encodeURIComponent(activeArtwork.title)}&body=Namaste%20Monika%2C%0A%0AI%20am%20interested%20in%20your%20artwork%3A%20${encodeURIComponent(activeArtwork.title)}.`}
-                      className="py-3 px-4 bg-gradient-to-r from-madder-700 to-madder-800 hover:from-madder-800 hover:to-madder-900 text-white rounded-xl font-bold text-xs sm:text-sm tracking-wider uppercase shadow-md flex items-center justify-center gap-2 transition-all cursor-pointer"
-                    >
-                      <Mail className="w-4 h-4" />
-                      <span>Email Inquiry</span>
-                    </a>
-                  </div>
+                  <a
+                    href="#inquiry"
+                    onClick={() => setActiveArtwork(null)}
+                    className="text-xs font-bold uppercase tracking-wider text-madder-700 hover:text-madder-800 underline underline-offset-4"
+                  >
+                    Go to Inquiries ↓
+                  </a>
                 </div>
 
               </div>

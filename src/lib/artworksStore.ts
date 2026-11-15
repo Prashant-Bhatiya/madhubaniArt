@@ -1,14 +1,14 @@
 import { Artwork } from "@/types/artwork";
 import { INITIAL_ARTWORKS } from "@/data/artworks";
 
-const LOCAL_STORAGE_KEY = "artisart_monika_artworks_v2";
+const LOCAL_STORAGE_KEY = "artisart_monika_artworks_v3";
 
 export async function fetchArtworks(): Promise<Artwork[]> {
   try {
     const res = await fetch("/api/artworks", { cache: "no-store" });
     if (res.ok) {
       const data = await res.json();
-      if (Array.isArray(data) && data.length > 0) {
+      if (Array.isArray(data) && data.length > 0 && data[0].id?.startsWith("monika-art-")) {
         if (typeof window !== "undefined") {
           localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(data));
         }
@@ -19,13 +19,13 @@ export async function fetchArtworks(): Promise<Artwork[]> {
     console.warn("Could not fetch from API, falling back to local storage or defaults", err);
   }
 
-  // Fallback to localStorage if available
+  // Fallback to localStorage only if it contains Monika's authentic artworks
   if (typeof window !== "undefined") {
     const cached = localStorage.getItem(LOCAL_STORAGE_KEY);
     if (cached) {
       try {
         const parsed = JSON.parse(cached);
-        if (Array.isArray(parsed) && parsed.length > 0) {
+        if (Array.isArray(parsed) && parsed.length > 0 && parsed[0].id?.startsWith("monika-art-")) {
           return parsed;
         }
       } catch {
