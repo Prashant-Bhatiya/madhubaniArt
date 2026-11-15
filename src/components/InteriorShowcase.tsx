@@ -25,7 +25,7 @@ export default function InteriorShowcase() {
   ];
 
   return (
-    <section id="interiors" className="py-24 bg-[#1f1917] text-white relative overflow-hidden">
+    <section id="interiors" className="py-20 lg:py-28 bg-[#1f1917] text-white relative overflow-hidden">
       {/* Subtle traditional gold backdrop glow */}
       <div className="absolute top-1/4 -left-32 w-96 h-96 bg-amber-600/10 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-1/4 -right-32 w-96 h-96 bg-madder-700/15 rounded-full blur-3xl pointer-events-none" />
@@ -35,16 +35,16 @@ export default function InteriorShowcase() {
         {/* Section Header */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end mb-16">
           <div className="lg:col-span-8 space-y-4">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-amber-950/80 border border-amber-600/40 text-amber-300 text-xs font-semibold uppercase tracking-widest">
-              <Compass className="w-3.5 h-3.5 text-ochre-400" />
-              <span>Interior Architecture & Ancient Art</span>
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-950/80 border border-amber-600/40 text-amber-300 text-xs sm:text-sm font-semibold uppercase tracking-widest">
+              <Compass className="w-4 h-4 text-ochre-400" />
+              <span>Interior Architecture &amp; Ancient Art</span>
             </div>
 
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-white tracking-tight">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-white leading-[1.2]">
               Curated by an <span className="text-amber-400 font-serif italic">Interior Designer</span> for Modern Sanctuaries
             </h2>
 
-            <p className="text-stone-300 text-base md:text-lg max-w-2xl leading-relaxed">
+            <p className="text-stone-300 text-base sm:text-lg max-w-2xl leading-relaxed">
               Monika bridges the sacred geometry of ancient Mithila art with modern spatial proportions. 
               Every piece is conceived not in isolation, but as a living dialogue with light, architectural lines, and interior serenity.
             </p>
@@ -55,7 +55,7 @@ export default function InteriorShowcase() {
               href="https://wa.me/918758752080?text=Namaste%20Monika%2C%20I%20am%20looking%20for%20an%20Interior%20Consultation%20with%20custom%20Madhubani%20Art."
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3.5 bg-gradient-to-r from-ochre-500 to-ochre-600 hover:from-ochre-600 hover:to-ochre-700 text-stone-950 rounded-full font-bold text-xs tracking-wider uppercase transition-all duration-300 shadow-lg shadow-ochre-500/20"
+              className="inline-flex items-center gap-2.5 px-6 py-3.5 bg-gradient-to-r from-ochre-500 to-ochre-600 hover:from-ochre-600 hover:to-ochre-700 text-stone-950 rounded-full font-bold text-xs sm:text-sm tracking-wider uppercase transition-all duration-200 shadow-lg shadow-ochre-500/20"
             >
               <MessageCircle className="w-4 h-4 text-stone-950" />
               <span>Book Interior Art Consult</span>
@@ -69,15 +69,15 @@ export default function InteriorShowcase() {
           
           {/* High-end Interior Scene */}
           <div className="lg:col-span-7">
-            <div className="relative rounded-2xl overflow-hidden border-2 border-stone-800 shadow-2xl group">
-              <div className="relative h-96 sm:h-[460px] w-full">
+            <div className="relative rounded-3xl overflow-hidden border-2 border-stone-800 shadow-2xl group">
+              <div className="relative h-96 sm:h-[480px] w-full">
                 <Image
                   src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1200&q=80"
                   alt="Modern Interior with Madhubani Artwork curated by Monika"
                   fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-700"
+                  className="object-cover group-hover:scale-104 transition-transform duration-700"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-stone-950/80 via-transparent to-black/20" />
+                <div className="absolute inset-0 bg-gradient-to-t from-stone-950/85 via-stone-950/20 to-transparent" />
                 
                 {/* Overlay Badge */}
                 <div className="absolute bottom-6 left-6 right-6">
@@ -87,7 +87,7 @@ export default function InteriorShowcase() {
                   <h3 className="text-xl sm:text-2xl font-display font-bold text-white mt-2">
                     Harmonizing Folk Roots in High-End Modern Residences
                   </h3>
-                  <p className="text-xs text-stone-300 mt-1 max-w-xl">
+                  <p className="text-xs sm:text-sm text-stone-300 mt-1.5 max-w-xl leading-relaxed">
                     Custom scale, hand-ground mineral ochre pigments, and tactile canvas texture curated specifically for luxury living room acoustics and visual warmth.
                   </p>
                 </div>
@@ -96,25 +96,25 @@ export default function InteriorShowcase() {
           </div>
 
           {/* Pillars of Monika's Interior Integration */}
-          <div className="lg:col-span-5 space-y-6">
-            <h3 className="text-xl font-display font-bold text-amber-200 uppercase tracking-widest text-xs">
-              Why Collectors & Homeowners Choose Monika
+          <div className="lg:col-span-5 space-y-5">
+            <h3 className="text-xs sm:text-sm font-bold uppercase tracking-widest text-amber-300">
+              Why Collectors &amp; Homeowners Choose Monika
             </h3>
 
-            <div className="space-y-4">
-              {interiorServices.map((service, idx) => (
+            <div className="space-y-3.5">
+              {interiorServices.map((service) => (
                 <div
                   key={service.title}
-                  className="p-4 rounded-xl bg-stone-900/60 border border-stone-800 hover:border-amber-500/50 transition-colors duration-300 flex items-start gap-3.5"
+                  className="p-4 sm:p-5 rounded-2xl bg-stone-900/70 border border-stone-800 hover:border-amber-500/50 transition-colors duration-200 flex items-start gap-4"
                 >
-                  <div className="w-8 h-8 rounded-lg bg-amber-500/10 text-amber-400 flex items-center justify-center shrink-0 mt-0.5">
-                    <CheckCircle2 className="w-4 h-4" />
+                  <div className="w-9 h-9 rounded-xl bg-amber-500/15 text-amber-400 flex items-center justify-center shrink-0 mt-0.5">
+                    <CheckCircle2 className="w-5 h-5" />
                   </div>
                   <div>
-                    <h4 className="text-sm font-semibold text-white tracking-wide">
+                    <h4 className="text-base font-semibold text-white tracking-wide">
                       {service.title}
                     </h4>
-                    <p className="text-xs text-stone-400 mt-1 leading-relaxed">
+                    <p className="text-xs sm:text-sm text-stone-300 mt-1 leading-relaxed">
                       {service.desc}
                     </p>
                   </div>
@@ -122,12 +122,12 @@ export default function InteriorShowcase() {
               ))}
             </div>
 
-            <div className="p-4 rounded-xl bg-gradient-to-r from-madder-900/60 to-stone-900 border border-madder-700/40 text-stone-300 text-xs flex items-center justify-between">
+            <div className="p-5 rounded-2xl bg-gradient-to-r from-madder-900/60 to-stone-900 border border-madder-700/50 text-stone-200 text-xs sm:text-sm flex items-center justify-between">
               <div>
-                <strong className="text-white block font-display">Personalized Spatial Commission:</strong>
-                <span>Direct phone consultation: <a href="tel:8758752080" className="text-amber-300 hover:underline font-semibold">+91 8758752080</a></span>
+                <strong className="text-white block font-display text-sm sm:text-base">Personalized Spatial Commission:</strong>
+                <span className="text-stone-300">Direct phone consultation: <a href="tel:8758752080" className="text-amber-300 hover:underline font-semibold">+91 8758752080</a></span>
               </div>
-              <Sparkles className="w-5 h-5 text-amber-400" />
+              <Sparkles className="w-5 h-5 text-amber-400 shrink-0 ml-3" />
             </div>
 
           </div>
