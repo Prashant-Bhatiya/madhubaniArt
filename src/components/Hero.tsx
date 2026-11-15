@@ -2,7 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
-import { Sparkles, ArrowRight, Palette, Compass, MessageCircle, Brush } from "lucide-react";
+import { Sparkles, ArrowRight, Palette, Compass, Brush } from "lucide-react";
 
 export default function Hero() {
   return (
@@ -77,20 +77,10 @@ export default function Hero() {
             <div className="pt-4 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
               <a
                 href="#gallery"
-                className="w-full sm:w-auto px-7 py-3.5 bg-gradient-to-r from-madder-700 to-madder-800 hover:from-madder-800 hover:to-madder-900 text-white rounded-full font-semibold text-xs tracking-wider uppercase shadow-lg shadow-madder-900/20 transition-all duration-200 transform hover:-translate-y-0.5 flex items-center justify-center gap-2 group"
+                className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-madder-700 to-madder-800 hover:from-madder-800 hover:to-madder-900 text-white rounded-full font-semibold text-xs tracking-wider uppercase shadow-lg shadow-madder-900/20 transition-all duration-200 transform hover:-translate-y-0.5 flex items-center justify-center gap-2 group"
               >
                 <span>Explore Artworks</span>
                 <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-              </a>
-
-              <a
-                href="https://wa.me/918758752080?text=Namaste%20Monika%2C%20I%20would%20love%20to%20discuss%20a%20personal%20crafted%20Madhubani%20painting%20from%20Art%20is%20Art."
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full sm:w-auto px-6 py-3.5 bg-white/80 hover:bg-white text-stone-800 hover:text-stone-900 rounded-full font-semibold text-xs tracking-wider uppercase border border-ochre-300 shadow-sm transition-all duration-200 flex items-center justify-center gap-2"
-              >
-                <MessageCircle className="w-4 h-4 text-emerald-600" />
-                <span>Inquire: 8758752080</span>
               </a>
             </div>
 
