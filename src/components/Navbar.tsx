@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import { Phone, Menu, X, MessageCircle } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import Logo from "./Logo";
 
 export default function Navbar() {
@@ -55,19 +55,6 @@ export default function Navbar() {
             ))}
           </nav>
 
-          {/* Contact & Inquiry Quick CTA */}
-          <div className="hidden lg:flex items-center gap-3 shrink-0">
-            <a
-              href="https://wa.me/918758752080?text=Namaste%20Monika%2C%20I%20am%20interested%20in%20your%20Art%20is%20Art%20Madhubani%20paintings%20and%20interior%20designs."
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-madder-700 to-madder-800 text-white rounded-full text-xs font-semibold tracking-wider uppercase shadow-sm hover:from-madder-800 hover:to-madder-900 transition-all duration-200 transform hover:-translate-y-0.5"
-            >
-              <MessageCircle className="w-3.5 h-3.5 text-amber-200" />
-              <span>Inquire: 8758752080</span>
-            </a>
-          </div>
-
           {/* Mobile Menu Toggle Button */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -94,24 +81,6 @@ export default function Navbar() {
                 <span className="text-ochre-500">→</span>
               </a>
             ))}
-            <div className="pt-3 flex flex-col gap-2">
-              <a
-                href="tel:8758752080"
-                className="flex items-center justify-center gap-2 py-2.5 bg-stone-900 text-white rounded-lg text-xs font-semibold uppercase tracking-wider"
-              >
-                <Phone className="w-4 h-4 text-ochre-400" />
-                <span>Call: +91 8758752080</span>
-              </a>
-              <a
-                href="https://wa.me/918758752080?text=Namaste%20Monika%2C%20I%20am%20inquiring%20about%20Art%20is%20Art%20paintings."
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 py-2.5 bg-emerald-700 text-white rounded-lg text-xs font-semibold uppercase tracking-wider"
-              >
-                <MessageCircle className="w-4 h-4" />
-                <span>WhatsApp Monika</span>
-              </a>
-            </div>
           </div>
         </div>
       )}
