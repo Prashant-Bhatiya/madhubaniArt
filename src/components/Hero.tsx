@@ -97,15 +97,15 @@ export default function Hero() {
           </div>
 
           {/* Right Column: Signature Artwork Feature Display */}
-          <div className="lg:col-span-5 relative">
-            <div className="relative mx-auto max-w-md lg:max-w-none">
+          <div className="lg:col-span-5 relative w-full flex justify-center">
+            <div className="relative w-full max-w-md mx-auto">
               
               {/* Traditional Frame Effect */}
-              <div className="relative p-3.5 bg-[#fdfaf3] rounded-2xl border-2 border-ochre-300 shadow-2xl overflow-hidden">
+              <div className="relative p-3.5 bg-[#fdfaf3] rounded-3xl border-2 border-ochre-300 shadow-2xl overflow-hidden">
                 
-                <div className="absolute inset-2 border border-dashed border-madder-500/40 pointer-events-none rounded-xl" />
+                <div className="absolute inset-2 border border-dashed border-madder-500/40 pointer-events-none rounded-2xl" />
 
-                <div className="relative h-80 sm:h-96 md:h-[430px] w-full rounded-lg overflow-hidden bg-stone-100">
+                <div className="relative h-80 sm:h-96 md:h-[430px] w-full rounded-xl overflow-hidden bg-stone-100">
                   <Image
                     src="https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=1200&q=80"
                     alt="Madhubani Tree of Life Painting by Monika - Art is Art"

@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Logo from "./Logo";
-import { Phone, MessageCircle, MapPin, Lock, Sparkles, ArrowUpRight } from "lucide-react";
+import { Phone, MessageCircle, MapPin, Lock, Sparkles, Mail } from "lucide-react";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -99,6 +99,16 @@ export default function Footer() {
                   <MessageCircle className="w-4 h-4" />
                 </div>
                 <span className="text-sm sm:text-base">WhatsApp: +91 8758752080</span>
+              </a>
+
+              <a
+                href="mailto:savmon15@gmail.com?subject=Art%20is%20Art%20-%20Inquiry%20for%20Monika"
+                className="flex items-center gap-3 text-amber-200 hover:text-white font-medium group transition-colors"
+              >
+                <div className="w-9 h-9 rounded-lg bg-stone-800 text-amber-300 border border-amber-900/40 flex items-center justify-center shrink-0 group-hover:bg-amber-600 group-hover:text-stone-950 transition-colors">
+                  <Mail className="w-4 h-4" />
+                </div>
+                <span className="text-sm sm:text-base break-all">savmon15@gmail.com</span>
               </a>
 
               <div className="flex items-center gap-3 text-stone-400 text-sm">
