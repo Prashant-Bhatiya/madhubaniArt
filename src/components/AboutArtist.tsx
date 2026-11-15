@@ -2,7 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
-import { Brush, Sparkles, Phone, Mail, Award, CheckCircle2 } from "lucide-react";
+import { Brush, Phone, Mail } from "lucide-react";
 
 export default function AboutArtist() {
   return (
@@ -45,16 +45,7 @@ export default function AboutArtist() {
 
               </div>
 
-              {/* Decorative Experience Seal Badge */}
-              <div className="absolute -bottom-5 -left-4 sm:-bottom-6 sm:-left-6 bg-madder-700 text-white p-4 rounded-2xl shadow-xl border-2 border-white max-w-[210px] z-10">
-                <div className="flex items-center gap-2">
-                  <Sparkles className="w-4 h-4 text-amber-300 shrink-0" />
-                  <span className="text-xs font-bold uppercase tracking-wider">Ancient Heritage</span>
-                </div>
-                <p className="text-[11px] text-amber-100 mt-1 leading-snug">
-                  Reviving Mithila ritual symbolism for contemporary architecture.
-                </p>
-              </div>
+
 
             </div>
           </div>
