@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-cormorant: 'Cormorant Garamond', Georgia, serif;
+  --font-playfair: 'Playfair Display', serif;
+  --font-outfit: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-cinzel: 'Cinzel', serif;
+}
+
+body {
+  background-color: #faf7f2;
+  color: #1a1615;
+  font-family: var(--font-outfit);
+  overflow-x: hidden;
+  background-image: 
+    radial-gradient(circle at 15% 15%, rgba(212, 139, 20, 0.03) 0%, transparent 40%),
+    radial-gradient(circle at 85% 85%, rgba(158, 42, 43, 0.03) 0%, transparent 40%),
+    radial-gradient(#caa77d 0.6px, transparent 0.6px);
+  background-size: 100% 100%, 100% 100%, 28px 28px;
+}
+
+/* Mithila Geometric Border Motif */
+.border-mithila-top {
+  background-image: linear-gradient(90deg, #9e2a2b 50%, #d48b14 50%);
+  background-size: 16px 3px;
+  background-repeat: repeat-x;
+}
+
+.border-mithila-frame {
+  border: 1px solid #d48b14;
+  outline: 4px solid #faf7f2;
+  box-shadow: 0 0 0 5px #9e2a2b;
+}
+
+/* Custom Silk Paper Shadow & Glow */
+.canvas-shadow {
+  box-shadow: 0 12px 35px -8px rgba(45, 25, 15, 0.12), 0 4px 12px -2px rgba(45, 25, 15, 0.06);
+}
+
+.gold-glow {
+  box-shadow: 0 0 35px -5px rgba(212, 139, 20, 0.25);
+}
+
+/* Smooth selection */
+::selection {
+  background-color: #9e2a2b;
+  color: #ffffff;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f4ede0;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d48b14;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #9e2a2b;
+}
